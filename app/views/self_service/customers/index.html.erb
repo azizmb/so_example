@@ -1,0 +1,23 @@
+<h1>Listing self_service_customers</h1>
+
+<table>
+  <tr>
+    <th>String</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @self_service_customers.each do |self_service_customer| %>
+  <tr>
+    <td><%= self_service_customer.string %></td>
+    <td><%= link_to 'Show', self_service_customer %></td>
+    <td><%= link_to 'Edit', edit_self_service_customer_path(self_service_customer) %></td>
+    <td><%= link_to 'Destroy', self_service_customer, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Customer', new_self_service_customer_path %>
